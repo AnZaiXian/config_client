@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+   config:
+      #uri: http://localhost:1201/
+   #profile: default 默认走default
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        serviceId: config-server
+
+
+server:
+ port: 2001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1001/eureka/  # 注册中心eurka地址
+    # 注册中心eurka地址
+    #单个注册 http://localhost:1001/eureka/
+    #服务注册的高可用: http://wrx:123456@peer1:8080/eureka/
+
+
+
+
